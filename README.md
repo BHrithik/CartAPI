@@ -1,4 +1,5 @@
 # CartAPI
+This is an API made using tornado framework in python and I psycog to connect to the postgres db
 
 To run this api we have to have a postgres db with the following tables 
 
@@ -19,8 +20,6 @@ After creating these tables change the credentials inside app.py file by replaci
 so that a connection can be established
 
 run app.py file to start the server
-
-to create a user send 
 
 http://localhost:3000/l/api/user/ (POST,PUT,DELETE) - to add update and delete users to delete use the url followed by the user id
 
