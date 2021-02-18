@@ -47,9 +47,9 @@ Product Template
 User Template
 {
             "name": "hrithik",
-            "home": "kothapet",
+            "home": "lb nagar",
             "email": "hrithik@hotmail.com",
-            "phone_no": "9121891018",
+            "phone_no": "9139018031",
             "office":"kompally",
             "other_add": null,
             "password": ""
