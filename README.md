@@ -15,12 +15,13 @@ Follow the sql commands below to create the database required to run this api
 
         `CREATE TABLE orders (order_id serial,user_id INT NOT NULL,product_id INT NOT NULL,quantity numeric,paid BOOLEAN DEFAULT false,shipping_address add,transaction_id TEXT,PRIMARY KEY (order_id,user_id,product_id,paid),FOREIGN KEY (user_id) REFERENCES users(id),FOREIGN KEY (product_id) REFERENCES products(id));`
 
+## After creation of the tables our database should look liek this 
 
-Users - ['id','name','home','email','phone_no','office','other_add','password'] where id is primary key
+        Users - ['id','name','home','email','phone_no','office','other_add','password'] where id is primary key
 
-Products - ['id','name','price','category'] where id is primary key
+        Products - ['id','name','price','category'] where id is primary key
 
-Cart - ['order_id','product_id','user_id','quantity','paid','shipping_address','transaction_id'] 
+        Cart - ['order_id','product_id','user_id','quantity','paid','shipping_address','transaction_id'] 
 
 
 In the cart table the productid is a foreign key referencing id in product table the same with user_id referencing id from user table 
@@ -30,6 +31,8 @@ After creating these tables change the credentials inside app.py file by replaci
 so that a connection can be established
 
 Run app.py file to start the server
+
+## Follow the below requests to Create,Update,Delete and Get data from the Postgres database by using the API
 
 http://localhost:3000/l/api/user/ (POST,PUT,DELETE) - to add update and delete users to delete use the url followed by the user id
 
