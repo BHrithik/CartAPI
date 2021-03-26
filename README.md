@@ -3,6 +3,18 @@ This is an API made using tornado framework in python and I psycog to connect to
 
 To run this api we have to have a postgres db with the following tables 
 
+Follow the sql commands below to create the database required to run this api 
+
+CREATE TYPE category1 AS ENUM (‘fruits’,’vegetables’,’clothes’,’fastfood’);
+
+CREATE TYPE add AS ENUM (‘home’,’office’,’add’);
+
+CREATE TABLE products (id serial PRIMARY KEY,name VARCHAR(255),price NUMERIC,category category1)
+
+CREATE TABLE users (id serial PRIMARY KEY,name VARCHAR(255),home TEXT,email TEXT UNIQUE NOT NULL,phone_no TEXT,office TEXT,other_add TEXT,password TEXT NOT NULL);
+
+CREATE TABLE orders (order_id serial,user_id INT NOT NULL,product_id INT NOT NULL,quantity numeric,paid BOOLEAN DEFAULT false,shipping_address add,transaction_id TEXT,PRIMARY KEY (order_id,user_id,product_id,paid),FOREIGN KEY (user_id) REFERENCES users(id),FOREIGN KEY (product_id) REFERENCES products(id));
+
 Users - ['id','name','home','email','phone_no','office','other_add','password'] where id is primary key
 
 Products - ['id','name','price','category'] where id is primary key
