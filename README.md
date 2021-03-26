@@ -49,6 +49,8 @@ http://localhost:3000/l/bill/ (GET,POST) - request to the url followed by user i
 
 http://localhost:3000/l/login/ (POST) - send email and password json to authenticate and login
 
+Json templates for POST requests
+
 Product Template
 {
     "name":"pants",
@@ -67,14 +69,12 @@ User Template
             "password": ""
 }
 
-
 Order Template
 {
     "product_id":1,
     "email":"hrithik@hotmail.com",
     "quantity":3
 }
-
 
 Transaction Template
 {
