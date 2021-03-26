@@ -17,11 +17,11 @@ Follow the sql commands below to create the database required to run this api
 
 ## After creation of the tables our database should look liek this 
 
-        Users - ['id','name','home','email','phone_no','office','other_add','password'] where id is primary key
+        Users    - ['id','name','home','email','phone_no','office','other_add','password']
 
-        Products - ['id','name','price','category'] where id is primary key
+        Products - ['id','name','price','category']
 
-        Cart - ['order_id','product_id','user_id','quantity','paid','shipping_address','transaction_id'] 
+        Cart     - ['order_id','product_id','user_id','quantity','paid','shipping_address','transaction_id'] 
 
 
 In the cart table the productid is a foreign key referencing id in product table the same with user_id referencing id from user table 
@@ -36,19 +36,26 @@ Run app.py file to start the server
 
 http://localhost:3000/l/api/user/ (POST,PUT,DELETE) - to add update and delete users to delete use the url followed by the user id
 
-http://localhost:3000/l/items (GET) - this request will give us all the products along with categories and prices 
+
+http://localhost:3000/l/items     (GET) - this request will give us all the products along with categories and prices 
+
 
 http://localhost:3000/l/api/item/ (POST,PUT,DELETE) -  to add update and delete products 
 
-http://localhost:3000/l/users (GET) - request to get info about all the users who signed up
+
+http://localhost:3000/l/users     (GET) - request to get info about all the users who signed up
+
 
 http://localhost:3000/l/api/cart/ (POST,PUT,DELETE) - to add update and delete orders send cart json
 
-http://localhost:3000/l/carts (GET) - get request to this url will give us all the orders placed by the user
 
-http://localhost:3000/l/bill/ (GET,POST) - request to the url followed by user id will yeild the bill for that user and post request will accept a json with transaction
+http://localhost:3000/l/carts     (GET) - get request to this url will give us all the orders placed by the user
 
-http://localhost:3000/l/login/ (POST) - send email and password json to authenticate and login
+
+http://localhost:3000/l/bill/     (GET,POST) - request to the url followed by user id will yeild the bill for that user and post request will accept a json with transaction
+
+
+http://localhost:3000/l/login/    (POST) - send email and password json to authenticate and login
 
 ## Json templates for POST requests
 
