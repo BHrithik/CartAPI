@@ -15,7 +15,7 @@ Follow the sql commands below to create the database required to run this api
 
         `CREATE TABLE orders (order_id serial,user_id INT NOT NULL,product_id INT NOT NULL,quantity numeric,paid BOOLEAN DEFAULT false,shipping_address add,transaction_id TEXT,PRIMARY KEY (order_id,user_id,product_id,paid),FOREIGN KEY (user_id) REFERENCES users(id),FOREIGN KEY (product_id) REFERENCES products(id));`
 
-## After creation of the tables our database should look liek this 
+## After creation of the tables our database should look like this 
 
         Users    - ['id','name','home','email','phone_no','office','other_add','password']
 
